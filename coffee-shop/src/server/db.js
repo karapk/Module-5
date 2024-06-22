@@ -1,11 +1,11 @@
 import * as fs from "fs";
 
 function readDb() {
-  return JSON.parse(fs.readFileSync("./db.json"));
+  return JSON.parse(fs.readFileSync("./src/server/db.json"));
 }
 
 function writeDb(updatedDb) {
-  fs.writeFileSync("./db.json", JSON.stringify(updatedDb, null, 2));
+  fs.writeFileSync("./src/server/db.json", JSON.stringify(updatedDb, null, 2));
 }
 
 export const db = {
