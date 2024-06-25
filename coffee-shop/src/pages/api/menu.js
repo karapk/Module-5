@@ -7,7 +7,6 @@ export default function handler(req, res) {
       res.status(200).json({ menu: menuItems });
     }else{
         res.status(404).json({message: "We're only doing/supporting GET method"});
-    }
-    res.status(200).json({ name: "John Doe" });
+    };
   }
   
