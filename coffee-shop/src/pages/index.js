@@ -45,7 +45,7 @@ function addToCart(id) {
             <h2>{item.name}</h2>
             <p>{item.description}</p>
             <p>${item.price}</p>
-            <button onClick={addToCart(item.id)}>Add to cart</button>
+            <button onClick={() => addToCart(item.id)}>Add to cart</button>
           </div>
         );
       })}
