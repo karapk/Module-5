@@ -7,3 +7,5 @@ There are 4 main methods on how to handle DATA (CRUD)
     - Read (GET) - retrieve data
     - Update (PUT) - Replaces infromatin at a specific address with new data that is being sent. predetermined URI
     - Delete  (DELETE) - deletes the data
+
+POSTMAN extension helps to visualize if the methods are working correctly in our given code. 
