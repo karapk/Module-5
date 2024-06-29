@@ -15,7 +15,7 @@ const server = http.createServer(function (req, res) {
     }else if (req.method === "POST") {
         res.writeHead(200, { 'Content-Type': 'text/html' });
 
-        res.end('<h1>Hello World</h1>');
+        res.end('<h1>Hello POST World</h1>');
     } else {
         res.writeHead(404, { 'Content-Type': 'text/html' });
         res.end('Not Found');
