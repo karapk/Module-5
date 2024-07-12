@@ -15,6 +15,12 @@ export default function Cart() {
 
   async function removeFromCart(id) {
     const res = await fetch(`/api/cart/${id}`, { method: "DELETE" });
+    // const data = await res.json();
+
+    setCartItems({ cart: cartItems.cart.filter((item) => item.id !== id) });
+
+    alert("Item removed from cart");
+
     // TODO #2 - we need to update the UI to reflect the changes in the cart. The simplest way to do this is to simply call loadData again. We also want to show the user an alert that we successfully removed the item
   }
 
@@ -44,6 +50,7 @@ export default function Cart() {
             >
               <h3>{item.id}</h3>
               <p>{item.quantity}</p>
+              <button onClick={() => incrementItem(item.id)}>Increase</button>
               {/* TODO #3 add increment and decrement buttons here */}
               <button onClick={() => removeFromCart(item.id)}>Remove</button>
             </div>
