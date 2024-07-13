@@ -61,3 +61,12 @@ export default function Home() {
     </>
   );
 }
+
+/* Explanation:
+
+- The first line imports the useEffect and useState hooks from the React library.
+- The useEffect hook is used to perform side effects in function components. UseEffect lets you perform actions outside the core rendering process of the function component.
+- The useState hook is used to create state variables in function components. It allows management of data that can change within your function component and automatically re-renders the component when the state changes.
+
+
+*/
