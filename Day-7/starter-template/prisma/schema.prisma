@@ -7,9 +7,10 @@ datasource db {
     url      = "file:./dev.db"
 }
 
-model HelloWorld {
+model Todo {
     id        Int      @id @default(autoincrement())
-    name      String   @unique
+    title     String
+    completed Boolean  @default(false)
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 }
