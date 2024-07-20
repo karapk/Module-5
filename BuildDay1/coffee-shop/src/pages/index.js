@@ -70,4 +70,6 @@ export default function Home() {
 - The Home function component is defined, which will be the main component rendered on the home page.
 - Inside the Home component, a state variable menu is created using the useState hook. The initial value of menu is an empty array. The empty array will be replaced with the menu data fetched from the API.
 
+- The useEffect hook is used to fetch the menu data from the API when the component mounts. The useEffect hook takes a function as its first argument, which is executed when the component mounts. Inside the function, an asynchronous function loadData is defined to fetch the menu data from the API using the fetch function. The fetch function returns a Promise, which is resolved to the response object res. The response object is then converted to JSON format using the json method, and the menu data is extracted from the response data. The extracted menu data is then set to the menu state variable using the setMenu function.
+
 */
