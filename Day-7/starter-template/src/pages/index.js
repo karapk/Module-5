@@ -58,7 +58,7 @@ export default function Home() {
             >
               {todo.completed ? 'Completed' : 'Complete'}
             </button>
-            <button 
+             <button 
               type="button" 
               className="btn btn-danger" 
               onClick={() => deleteTodo(todo.id)}></button>
