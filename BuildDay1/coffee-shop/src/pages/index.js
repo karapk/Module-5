@@ -73,4 +73,9 @@ export default function Home() {
 - The useEffect hook is used to fetch the menu data from the API when the component mounts. The useEffect hook takes a function as its first argument, which is executed when the component mounts. Inside the function, an asynchronous function loadData is defined to fetch the menu data from the API using the fetch function. The fetch function returns a Promise, which is resolved to the response object res. The response object is then converted to JSON format using the json method, and the menu data is extracted from the response data. The extracted menu data is then set to the menu state variable using the setMenu function.
 
 - The loadData function is called inside the useEffect hook to fetch the menu data when the component mounts. The useEffect hook has an empty dependency array as the second argument, which means the effect will only run once when the component mounts.
+
+- The function addToCart is defined to add an item to the cart when the "Add to cart" button is clicked. The function sends a POST request to the /api/cart endpoint with the item id and quantity as the request body.
+
+- The Home component returns JSX elements to display the menu items fetched from the API. If the menu data is still loading (menu.length === 0), a loading message is displayed. Otherwise, the menu items are displayed in a grid layout with each item showing the name, description, price, and an "Add to cart" button. The "Add to cart" button calls the addToCart function with the item id as an argument when clicked.
+
 */
