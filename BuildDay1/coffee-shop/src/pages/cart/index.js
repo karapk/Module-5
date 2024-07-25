@@ -9,20 +9,29 @@ export default function Cart() {
     setCartItems(data);
   }
 
-  useEffect(() => {
-    loadData();
-  }, []);
-
   async function removeFromCart(id) {
     const res = await fetch(`/api/cart/${id}`, { method: "DELETE" });
-    // const data = await res.json();
+    const data = await res.json();
 
     setCartItems({ cart: cartItems.cart.filter((item) => item.id !== id) });
 
     alert("Item removed from cart");
 
-    // TODO #2 - we need to update the UI to reflect the changes in the cart. The simplest way to do this is to simply call loadData again. We also want to show the user an alert that we successfully removed the item
-  }
+  async function incrementItem(id) {
+    const res = await fetch(`/api/cart/${id}`, { method: "PUT" });
+    const data = await res.json();
+    loadData();
+    alert("Item quantity increased"); 
+
+    // TODO #2 - we need to update the UI to reflect the changes in the cart. The simplest way to do this is to simply call loadData again. We also want to show the user an alert that we successfully removethe item
+  } 
+}
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+
 
   return (
     <>
