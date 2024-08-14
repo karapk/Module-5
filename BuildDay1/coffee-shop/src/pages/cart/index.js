@@ -58,7 +58,7 @@ export default function Cart() {
                 padding: "10px",
               }}
             >
-              <h3>{item.id}</h3>
+              {/* <h3>{item.id}</h3> */}
               <p>{item.quantity}</p>
               <button onClick={() => incrementItem(item.id)}>Increase</button>
               {/* TODO #3 add increment and decrement buttons here */}
